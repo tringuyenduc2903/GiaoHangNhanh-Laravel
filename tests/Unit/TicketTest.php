@@ -34,7 +34,7 @@ test('create ticket must be array', function (
 test('reply ticket must be array', function (int $ticket_id) {
     $result = GiaoHangNhanh::replyTicket([
         'ticket_id' => $ticket_id,
-        'description' => vnfaker()->paragraphs(),
+        'description' => 'Test',
     ]);
 
     expect($result)->toBeArray();
