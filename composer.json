@@ -1,17 +1,19 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "tringuyenduc2903/giaohangnhanh-laravel",
+    "description": "GiaoHangNhanh (GHN) SDK for Laravel Framework",
     "keywords": [
-        ":vendor_name",
+        "Nguyễn Đức Trí",
         "laravel",
-        ":package_slug"
+        "giaohangnhanh",
+        "ghn",
+        "giaohangnhanh-laravel"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/tringuyenduc2903/giaohangnhanh-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Nguyễn Đức Trí",
+            "email": "nguyenductri2k3@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,19 +37,18 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "TriNguyenDuc\\GiaoHangNhanh\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "TriNguyenDuc\\GiaoHangNhanh\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-giaohangnhanh-laravel --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +74,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "TriNguyenDuc\\GiaoHangNhanh\\GiaoHangNhanhServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "GiaoHangNhanh": "TriNguyenDuc\\GiaoHangNhanh\\Facades\\GiaoHangNhanh"
             }
         }
     },
