@@ -8,10 +8,12 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Address;
+use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\CalculateFee;
 
 class GiaoHangNhanh
 {
     use Address;
+    use CalculateFee;
 
     protected function getRequest(
         ?int $shop_id,
