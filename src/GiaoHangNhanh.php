@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Address;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\CalculateFee;
+use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Order;
 
 class GiaoHangNhanh
 {
     use Address;
     use CalculateFee;
+    use Order;
 
     protected function getRequest(
         ?int $shop_id,

@@ -60,8 +60,6 @@ dataset('order code', [
 ]);
 
 dataset('order code calculate', [
-    'G8XMFVPL',
-    'G8XMFVDL',
 ]);
 
 dataset('client order code', [
