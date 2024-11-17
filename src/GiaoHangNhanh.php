@@ -12,6 +12,7 @@ use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\CalculateFee;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Order;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Store;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Ticket;
+use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Utility;
 
 class GiaoHangNhanh
 {
@@ -20,6 +21,7 @@ class GiaoHangNhanh
     use Order;
     use Store;
     use Ticket;
+    use Utility;
 
     protected function getRequest(
         ?int $shop_id,
