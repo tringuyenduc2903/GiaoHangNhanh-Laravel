@@ -1158,6 +1158,120 @@ return [
 ];
 ```
 
+### #22 [Create Ticket](https://api.ghn.vn/home/docs/detail?id=70)
+
+**Create Ticket then need support your order**
+
+```php
+\GiaoHangNhanh::createTicket([
+    'order_code' => $order_code,
+    'category' => $category,
+    'attachments' => $attachments,
+    'description' => $description,
+    'c_email' => $c_email,
+]);
+```
+
+```php
+return [
+    'attachments' => [],
+    'client_id' => 'Client Id (Hided)',
+    'conversations' => null,
+    'created_at' => '2024-10-21T06:26:12Z',
+    'created_by' => 2043022450559,
+    'description' => "Run Test (Don't reply this ticket)",
+    'id' => 26262246,
+    'order_code' => 'Order code (Hided)',
+    'status' => 'Đang xử lý',
+    'status_id' => 1,
+    'type' => 'Thay đổi thông tin',
+    'updated_at' => '2024-10-21T06:26:12Z',
+];
+```
+
+### #23 [Create Feedback of Ticket](https://api.ghn.vn/home/docs/detail?id=69)
+
+**Reply Feedback of Ticket**
+
+```php
+\GiaoHangNhanh::createFeedbackTicket([
+    'ticket_id' => $ticket_id,
+    'attachments' => $attachments,
+    'description' => $description,
+]);
+```
+
+```php
+return [
+    'body' => "<div>Run Test (Don't reply this ticket)</div>",
+    'created_at' => '2024-10-21T06:34:52Z',
+    'from_email' => '"Email Support Khách hàng GHN" <cskh@ghn.vn>',
+    'updated_at' => '2024-10-21T06:34:52Z',
+    'user_id' => 2043022450559,
+];
+```
+
+### #24 [Get Ticket List](https://api.ghn.vn/home/docs/detail?id=57)
+
+**Get all ticket to created**
+
+```php
+\GiaoHangNhanh::getTicketList([
+    'offset' => $offset,
+    'limit' => $limit,
+]);
+```
+
+```php
+return [
+    0 => [
+        'attachments' => [],
+        'c_email' => 'Client Email (Hided)',
+        'c_name' => 'Client Name (Hided)',
+        'c_phone' => 'Client Phone (Hided)',
+        'client_id' => 'Client Id (Hided)',
+        'conversations' => [],
+        'created_at' => '2024-10-21T06:26:12Z',
+        'created_by' => 2043022450559,
+        'description' => "Run Test (Don't reply this ticket)",
+        'id' => 26262246,
+        'order_code' => 'Order code (Hided)',
+        'status' => 'Đang xử lý',
+        'status_id' => 1,
+        'type' => 'Thay đổi thông tin',
+        'updated_at' => '2024-10-21T06:26:13Z',
+    ],
+];
+```
+
+### #25 [Get Ticket](https://api.ghn.vn/home/docs/detail?id=68)
+
+**Get all ticket to created**
+
+```php
+\GiaoHangNhanh::getTicket($ticket_id);
+```
+
+```php
+return [
+    'attachments' => [],
+    'c_email' => 'Client Email (Hided)',
+    'c_name' => 'Client Name (Hided)',
+    'c_phone' => 'Client Phone (Hided)',
+    'client_id' => 'Client Id (Hided)',
+    'conversations' => [],
+    'created_at' => '2024-10-21T06:26:12Z',
+    'created_by' => 2043022450559,
+    'description' => "Run Test (Don't reply this ticket)",
+    'id' => 26262246,
+    'order_code' => 'Order code (Hided)',
+    'status' => 'Đang xử lý',
+    'status_id' => 1,
+    'type' => 'Thay đổi thông tin',
+    'updated_at' => '2024-10-21T06:26:13Z',
+];
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
