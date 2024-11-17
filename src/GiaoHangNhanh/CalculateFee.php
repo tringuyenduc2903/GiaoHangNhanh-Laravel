@@ -61,10 +61,7 @@ trait CalculateFee
 
         $response = $this
             ->getRequest($shop_id, $api_url, $token)
-            ->post(
-                'shiip/public-api/v2/shipping-order/available-services',
-                $data
-            );
+            ->post('shiip/public-api/v2/shipping-order/available-services', $data);
 
         $this->handleFailedResponse($response);
 

@@ -10,12 +10,14 @@ use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Address;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\CalculateFee;
 use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Order;
+use TriNguyenDuc\GiaoHangNhanh\GiaoHangNhanh\Store;
 
 class GiaoHangNhanh
 {
     use Address;
     use CalculateFee;
     use Order;
+    use Store;
 
     protected function getRequest(
         ?int $shop_id,

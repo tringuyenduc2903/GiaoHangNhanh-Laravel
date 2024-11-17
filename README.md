@@ -1095,6 +1095,69 @@ return [
 ];
 ```
 
+### #20 [Create Store](https://api.ghn.vn/home/docs/detail?id=58)
+
+**Use to create new Store. Each account can have many Store and each Store is a place to help GHN know where to pick up
+items**
+
+```php
+\GiaoHangNhanh::createStore([
+    'ward_code' => $ward_code,
+    'district_id' => $district_id,
+    'name' => $name,
+    'phone' => $phone,
+    'address' => $address,
+]);
+```
+
+```php
+return 194780;
+```
+
+### #21 [Get Store](https://api.ghn.vn/home/docs/detail?id=79)
+
+**Get the current Store of logged in client. One client can have many pick up addresses. Each address is a Store**
+
+```php
+\GiaoHangNhanh::getStore([
+    'clientphone' => $clientphone,
+    'offset' => $offset,
+    'limit' => $limit,
+]);
+```
+
+```php
+return [
+    'last_offset' => 5980924,
+    'shops' => [
+        0 => [
+            '_id' => 5353886,
+            'name' => 'Store Name (Hided)',
+            'phone' => 'Store Phone (Hided)',
+            'address' => 'Store Address (Hided)',
+            'ward_code' => 'Store Ward Code (Hided)',
+            'district_id' => 1490,
+            'client_id' => 164936,
+            'bank_account_id' => 0,
+            'status' => 1,
+            'location' => [],
+            'version_no' => '8d4ade30-e9d2-4157-a1da-a5727d533272',
+            'is_created_chat_channel' => false,
+            'updated_ip' => '171.224.180.113',
+            'updated_employee' => 0,
+            'updated_client' => 164936,
+            'updated_source' => 'shiip',
+            'updated_date' => '2024-09-28T15:09:56.01Z',
+            'created_ip' => '171.224.180.113',
+            'created_employee' => 0,
+            'created_client' => 164936,
+            'created_source' => 'shiip',
+            'created_date' => '2024-09-28T15:09:56.01Z',
+        ],
+    ],
+];
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
