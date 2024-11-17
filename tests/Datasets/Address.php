@@ -13,3 +13,7 @@ dataset('district id', [
     'Huyện Văn Quan' => 3311,
     'Huyện Cư Jút' => 3152,
 ]);
+
+dataset('address', [
+    ['470610', 3196],
+]);

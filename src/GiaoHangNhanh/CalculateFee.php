@@ -56,7 +56,7 @@ trait CalculateFee
         ?int $shop_id = null,
         ?string $api_url = null,
         ?string $token = null
-    ): array {
+    ): ?array {
         $data['shop_id'] = $shop_id ?: config('giaohangnhanh-laravel.shop_id');
 
         $response = $this
