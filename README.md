@@ -198,7 +198,15 @@ information such as weight, height, length, width, to_district_id, to_ward_code,
     'width' => $width,
     'height' => $height,
     'cod_value' => $cod_value,
-    'items' => $items,
+    'items' => [
+        'name' => $name,
+        'code' => $code,
+        'quantity' => $quantity,
+        'height' => $height,
+        'weight' => $weight,
+        'width' => $width,
+        'length' => $length,
+    ],
 ]);
 ```
 
@@ -396,7 +404,19 @@ return [
     'pick_shift' => $pick_shift,
     'pick_shift' => $pick_shift,
     'pickup_time' => $pickup_time,
-    'items' => $items,
+    'items' => [
+        'name' => $name,
+        'code' => $code,
+        'quantity' => $quantity,
+        'price' => $price,
+        'length' => $length,
+        'weight' => $weight,
+        'width' => $width,
+        'height' => $height,
+        'category' => [
+            'level1' => $level1,
+        ],
+    ],
     'cod_failed_amount' => $cod_failed_amount,
 ]);
 ```
@@ -479,7 +499,19 @@ these information and start the shipment**
     'pick_shift' => $pick_shift,
     'pick_shift' => $pick_shift,
     'pickup_time' => $pickup_time,
-    'items' => $items,
+    'items' => [
+        'name' => $name,
+        'code' => $code,
+        'quantity' => $quantity,
+        'price' => $price,
+        'length' => $length,
+        'weight' => $weight,
+        'width' => $width,
+        'height' => $height,
+        'category' => [
+            'level1' => $level1,
+        ],
+    ],
     'cod_failed_amount' => $cod_failed_amount,
 ]);
 ```
@@ -560,7 +592,18 @@ return [
     'pick_shift' => $pick_shift,
     'pick_shift' => $pick_shift,
     'pickup_time' => $pickup_time,
-    'items' => $items,
+    'items' => [
+        'name' => $name,
+        'code' => $code,
+        'quantity' => $quantity,
+        'price' => $price,
+        'length' => $length,
+        'width' => $width,
+        'height' => $height,
+        'category' => [
+            'level1' => $level1,
+        ],
+    ],
 ]);
 ```
 
