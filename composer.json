@@ -4,6 +4,7 @@
     "keywords": [
         "Nguyễn Đức Trí",
         "laravel",
+        "giao hang nhanh",
         "giaohangnhanh",
         "ghn",
         "giaohangnhanh-laravel"
@@ -18,10 +19,10 @@
         }
     ],
     "require": {
-        "php": "^8.2",
         "cerbero/laravel-enum": "^1.3",
         "guzzlehttp/guzzle": "^7.9",
         "illuminate/contracts": "^10.0||^11.0",
+        "php": "^8.2",
         "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
