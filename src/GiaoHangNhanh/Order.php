@@ -265,7 +265,7 @@ trait Order
         ?int $shop_id = null,
         ?string $api_url = null,
         ?string $token = null
-    ) {
+    ): array {
         $response = $this
             ->getRequest($shop_id, $api_url, $token)
             ->post('shiip/public-api/v2/shift/date');

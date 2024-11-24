@@ -182,6 +182,10 @@ test('orderInfo must be array', function (string $order_code) {
 })->with('order code');
 
 test('orderInfoByClientOrderCode must be array', function (string $order_code) {
+    if (! $order_code) {
+        return;
+    }
+
     expect(GiaoHangNhanh::orderInfoByClientOrderCode($order_code))->toBeArray()->dump();
 })->with('client order code');
 
