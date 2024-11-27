@@ -21,7 +21,7 @@ test(
     ) {
         switch ($service_type_id) {
             case ServiceTypeId::HANG_NHE:
-                $weight = random_int(1, 19999);
+                $weight = random_int(1, 199) * 100;
 
                 $items = [[
                     'name' => vnfaker()->fullname(),
@@ -30,7 +30,7 @@ test(
                 break;
             case ServiceTypeId::HANG_NANG:
             default:
-                $weight = random_int(20000, 50000);
+                $weight = random_int(2, 5) * 10000;
 
                 $items = [[
                     'name' => vnfaker()->fullname(),
@@ -59,7 +59,7 @@ test(
             'to_district_id' => $to_district_id,
             'client_order_code' => $client_order_code,
             'weight' => $weight,
-            'insurance_value' => random_int(0, 5000000),
+            'insurance_value' => random_int(0, 999) * 1000,
             'payment_type_id' => $payment_type_id,
             'required_note' => $required_note,
             'items' => $items,
@@ -88,7 +88,7 @@ test(
     ) {
         switch ($service_type_id) {
             case ServiceTypeId::HANG_NHE:
-                $weight = random_int(1, 19999);
+                $weight = random_int(1, 199) * 100;
 
                 $items = [[
                     'name' => vnfaker()->fullname(),
@@ -97,7 +97,7 @@ test(
                 break;
             case ServiceTypeId::HANG_NANG:
             default:
-                $weight = random_int(20000, 50000);
+                $weight = random_int(2, 5) * 10000;
 
                 $items = [[
                     'name' => vnfaker()->fullname(),
@@ -126,7 +126,7 @@ test(
             'to_district_id' => $to_district_id,
             'client_order_code' => $client_order_code,
             'weight' => $weight,
-            'insurance_value' => random_int(0, 5000000),
+            'insurance_value' => random_int(0, 999) * 1000,
             'payment_type_id' => $payment_type_id,
             'required_note' => $required_note,
             'items' => $items,
@@ -152,14 +152,14 @@ test('updateOrder must be null',
             'to_address' => fake()->address,
             'to_ward_code' => '470610',
             'to_district_id' => 3152,
-            'weight' => random_int(1, 19999),
-            'insurance_value' => random_int(0, 5000000),
+            'weight' => random_int(1, 199) * 100,
+            'insurance_value' => random_int(0, 999) * 1000,
             'payment_type_id' => fake()->randomElement(PaymentTypeId::keys()),
             'required_note' => fake()->randomElement(RequiredNote::keys()),
             'items' => [[
                 'name' => vnfaker()->fullname(),
                 'quantity' => 1,
-                'weight' => random_int(1, 19999),
+                'weight' => random_int(1, 199) * 100,
             ]],
         ]))->toBeNull()->dump();
     }
@@ -172,7 +172,7 @@ test('updateCodOrder must be null',
     function (string $order_code) {
         expect(GiaoHangNhanh::updateCodOrder([
             'order_code' => $order_code,
-            'cod_amount' => random_int(0, 5000000),
+            'cod_amount' => random_int(0, 999) * 1000,
         ]))->toBeNull()->dump();
     }
 )->with('order code');

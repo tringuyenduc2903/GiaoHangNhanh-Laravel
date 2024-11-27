@@ -16,7 +16,7 @@ test(
     ) {
         switch ($service_type_id) {
             case ServiceTypeId::HANG_NHE:
-                $weight = random_int(1, 19999);
+                $weight = random_int(1, 199) * 100;
 
                 $items = [[
                     'name' => vnfaker()->fullname(),
@@ -25,7 +25,7 @@ test(
                 break;
             case ServiceTypeId::HANG_NANG:
             default:
-                $weight = random_int(20000, 50000);
+                $weight = random_int(2, 5) * 10000;
 
                 $items = [[
                     'name' => vnfaker()->fullname(),
@@ -50,7 +50,7 @@ test(
             'to_ward_code' => $to_ward_code,
             'to_district_id' => $to_district_id,
             'weight' => $weight,
-            'insurance_value' => random_int(0, 5000000),
+            'insurance_value' => random_int(0, 5000) * 1000,
             'items' => $items,
         ]))->toBeArray()->dump();
     }
