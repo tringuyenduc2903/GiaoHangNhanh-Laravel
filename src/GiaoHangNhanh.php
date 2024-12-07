@@ -33,7 +33,7 @@ class GiaoHangNhanh
                 'token' => $token ?: config('giaohangnhanh-laravel.token'),
                 'shop_id' => $shop_id ?: config('giaohangnhanh-laravel.shop_id'),
             ])
-            ->accept('application/json');
+            ->acceptJson();
     }
 
     /**
